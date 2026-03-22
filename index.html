@@ -884,12 +884,12 @@
 <!-- Navigation Dots -->
 <nav class="nav-dots">
     <div class="nav-dot active" data-section="hero" title="Top"></div>
+    <div class="nav-dot" data-section="video" title="Video Guide"></div>
     <div class="nav-dot" data-section="specs" title="Specifications"></div>
     <div class="nav-dot" data-section="structure" title="Folder Structure"></div>
     <div class="nav-dot" data-section="fullmix" title="Full Mix & Alts"></div>
     <div class="nav-dot" data-section="stems" title="Stems"></div>
     <div class="nav-dot" data-section="cutdowns" title="Cut Downs"></div>
-    <div class="nav-dot" data-section="video" title="Video Guide"></div>
     <div class="nav-dot" data-section="contact" title="Contact"></div>
 </nav>
 
@@ -924,6 +924,27 @@
 
 <!-- ==================== CONTENT ==================== -->
 <div class="content">
+
+    <!-- ===== VIDEO EXPLAINER ===== -->
+    <section class="section" id="video">
+        <div class="animate-in" style="text-align: center; margin-bottom: 32px;">
+            <div style="display: inline-flex; align-items: center; gap: 10px; padding: 8px 20px; border-radius: 100px; background: rgba(140, 120, 180, 0.08); border: 1px solid rgba(160, 140, 200, 0.15); color: #9688bb; font-size: 13px; font-weight: 500; letter-spacing: 1px; margin-bottom: 16px;">
+                <span style="font-size: 18px;">&#9658;</span>
+                VIDEO GUIDE
+            </div>
+            <h2 style="font-size: 28px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 8px;">Prefer Watching?</h2>
+            <p style="color: #7e7e90; font-size: 16px;">A quick visual walkthrough of the entire delivery process.</p>
+        </div>
+        <div class="animate-in delay-1" style="background: #131319; border: 1px solid rgba(255,255,255,0.05); border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.4);">
+            <video controls playsinline preload="metadata" style="width: 100%; display: block; border-radius: 20px;"
+                   poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='960' height='540' fill='%230c0c11'%3E%3Crect width='960' height='540'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239688bb' font-family='Inter,sans-serif' font-size='24'%3E%E2%96%B6 Play Video%3C/text%3E%3C/svg%3E">
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
 
     <!-- ===== SECTION 1: SPECS ===== -->
     <section class="section" id="specs">
@@ -1262,27 +1283,6 @@
 
     <div class="section-divider"></div>
 
-    <!-- ===== VIDEO EXPLAINER ===== -->
-    <section class="section" id="video">
-        <div class="animate-in" style="text-align: center; margin-bottom: 32px;">
-            <div style="display: inline-flex; align-items: center; gap: 10px; padding: 8px 20px; border-radius: 100px; background: rgba(140, 120, 180, 0.08); border: 1px solid rgba(160, 140, 200, 0.15); color: #9688bb; font-size: 13px; font-weight: 500; letter-spacing: 1px; margin-bottom: 16px;">
-                <span style="font-size: 18px;">&#9658;</span>
-                VIDEO GUIDE
-            </div>
-            <h2 style="font-size: 28px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 8px;">Prefer Watching?</h2>
-            <p style="color: #7e7e90; font-size: 16px;">A quick visual walkthrough of the entire delivery process.</p>
-        </div>
-        <div class="animate-in delay-1" style="background: #131319; border: 1px solid rgba(255,255,255,0.05); border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.4);">
-            <video controls playsinline preload="metadata" style="width: 100%; display: block; border-radius: 20px;"
-                   poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='960' height='540' fill='%230c0c11'%3E%3Crect width='960' height='540'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%239688bb' font-family='Inter,sans-serif' font-size='24'%3E%E2%96%B6 Play Video%3C/text%3E%3C/svg%3E">
-                <source src="video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
     <!-- ===== CONTACT ===== -->
     <section class="contact-section" id="contact">
         <div class="animate-in">
@@ -1315,7 +1315,7 @@
     document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
 
     // Nav dots
-    const sections = ['hero', 'specs', 'structure', 'fullmix', 'stems', 'cutdowns', 'video', 'contact'];
+    const sections = ['hero', 'video', 'specs', 'structure', 'fullmix', 'stems', 'cutdowns', 'contact'];
     const dots = document.querySelectorAll('.nav-dot');
 
     dots.forEach(dot => {
